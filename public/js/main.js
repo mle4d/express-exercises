@@ -1,15 +1,15 @@
 const root = document.getElementById('root');
-const dogList = document.createElement('ul');
+const colorList = document.createElement('ul');
 
-fetch('/api/v1/dogs')
+fetch('/api/v1/colors')
   .then(res => res.json())
-  .then(dogs => {
-    dogs.forEach(dog => {
+  .then(colors => {
+    colors.forEach(color => {
       const li = document.createElement('li');
-      li.textContent = `${dog.dog}`;
-      dogList.appendChild(li);
+      li.textContent = `${color.name}`;
+      colorList.appendChild(li);
     });
   });
 
-root.appendChild(dogList);
+root.appendChild(colorList);
 
