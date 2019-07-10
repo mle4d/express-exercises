@@ -6,7 +6,7 @@ fetch('/api/v1/dogs')
   .then(dogs => {
     dogs.forEach(dog => {
       const li = document.createElement('li');
-      li.textContent = `${dog}`;
+      li.textContent = `${dog.dog}`;
       dogList.appendChild(li);
     });
   });
