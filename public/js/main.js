@@ -9,7 +9,7 @@ fetch('/api/v1/colors')
       const li = document.createElement('li');
       link.href = `./list.html?color=${color.name}`;
       li.textContent = `${color.name} ${color.hex} ${color.r} ${color.g} ${color.b}`;
-      // li.style.color = color.hex;
+      link.style.color = `#${color.hex}`;
       link.appendChild(li);
       colorList.appendChild(link);
     });
