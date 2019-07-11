@@ -1,11 +1,12 @@
-const main = document.getElementById('main');
+const main = document.getElementById('root');
 const search = new URLSearchParams(window.location.search);
-const name = search.get('name');
+const color = search.get('color');
 
 fetch(`/api/v1/colors/${color}`)
   .then(res => res.json())
   .then(color => {
-    const list = document.createElement('list');
+    console.log(color);
+    const list = document.createElement('li');
     list.textContent = `${color.name} ${color.hex} ${color.r} ${color.g} ${color.b}`;
     main.style.color = color.hex;
 
