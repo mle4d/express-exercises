@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "directories": {
-    "lib": "lib",
-    "test": "test"
-  },
   "scripts": {
     "test": "jest",
     "test:watch": "npm run test -- --watch",
@@ -20,6 +16,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true,
+    "browser": true
+    },
   "bugs": {
     "url": "https://github.com/mle4d/express-exercises/issues"
   },
